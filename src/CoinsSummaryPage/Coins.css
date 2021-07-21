@@ -1,0 +1,131 @@
+.crytoCoin {
+    overflow: hidden;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    width: 250px;
+    margin: 2rem;
+    box-shadow: 0 3px 3px palevioletred;
+}
+
+.coinLogo {
+    width: 8rem;
+    margin-top:1.2rem;
+    height: 55px;
+    width: 55px
+}
+
+.coinNameWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.coinName {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right:4px;
+   
+}
+
+.coinSymbol{
+    
+    font-size: 10px;
+    font-weight: 500;
+   
+    
+}
+
+.priceContainerUP{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    background-color: limegreen;
+
+}
+
+.priceContainerDOWN{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    background-color: rgb(245, 39, 39);
+
+}
+
+svg{
+    background-color: transparent;
+}
+
+.priceChange{
+    background-color: transparent;
+    padding-left: 10px;
+    text-shadow: 0 0 14 black;
+}
+
+.coinPrice {
+    width: auto;
+    background-color: transparent;
+}
+
+.coinMarketcap{
+    width: auto;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    background-color: transparent;
+}
+
+.coinsContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: white;
+}
+
+/*.crytoCoin:hover {*/
+    /*transform: scale(1.1);*/
+/*}*/
+
+.crytoCoin:hover .overlay{
+    opacity: 0.5;
+}
+
+
+.dashName {
+    color: yellow;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 30px;
+}
+
+.fName {
+    color: white;
+    margin-top: 40px;
+    margin-left: -900px;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif
+}
+
+.details {
+    display: flex;
+    border: none;
+    background-color: black;
+    margin-left:2px;
+    color:blue;
+}

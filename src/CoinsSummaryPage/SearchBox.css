@@ -1,0 +1,8 @@
+.inputBox {
+    display: flex;
+    justify-items: center;
+    width: 400px;
+    height:40px;
+    margin: 100px auto;
+    margin-top: 10px;
+}
