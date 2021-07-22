@@ -9,7 +9,6 @@
 }
 
 .coinLogo {
-    width: 8rem;
     margin-top:1.2rem;
     height: 55px;
     width: 55px
@@ -32,11 +31,8 @@
 }
 
 .coinSymbol{
-    
-    font-size: 10px;
-    font-weight: 500;
-   
-    
+    font-size: 12px;
+    font-weight: 500; 
 }
 
 .priceContainerUP{
@@ -48,7 +44,7 @@
     border: none;
     font-size: 1rem;
     color: white;
-    padding: 1rem;
+    padding: 10px;
     background-color: limegreen;
 
 }
@@ -62,14 +58,14 @@
     border: none;
     font-size: 1rem;
     color: white;
-    padding: 1rem;
+    padding: 10px;
     background-color: rgb(245, 39, 39);
 
 }
 
-svg{
+/* svg{
     background-color: transparent;
-}
+} */
 
 .priceChange{
     background-color: transparent;
@@ -128,4 +124,16 @@ svg{
     background-color: black;
     margin-left:2px;
     color:blue;
+}
+
+.plus {
+    margin-right: 200px;
+    font-size: 20px;
+    margin-bottom: 2px;
+   
+}
+
+.minus {
+    margin-bottom: 2px;
+    font-size: 20px;
 }

@@ -11,13 +11,15 @@ import {
     Route,
 } from "react-router-dom";
 
+import Header from "./CoinsSummaryPage/Header";
+
 function App() {
     const loadedFavouritesCoins = localStorage.getItem('favouriteCoins');
     const [state, setState] = useState({
         coins: [],
         favouriteCoins:loadedFavouritesCoins === null ? []:JSON.parse(loadedFavouritesCoins)
     });
-
+      
 
     const addFavouriteCoin = (coin) => {
         state.favouriteCoins.unshift(coin);
@@ -42,8 +44,9 @@ function App() {
             coins:state.coins
         })
     };
-
+     
     useEffect(() => {
+        
         axios
             .get(
                 "https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false"
@@ -65,10 +68,10 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/" >
                     <CoinsSummaryPage coins={state.coins} favouriteCoins={state.favouriteCoins} addFavouriteCoin={addFavouriteCoin} removeFavouriteCoin={removeFavouriteCoin} />
                 </Route>
-                <Route path="/coin/:id">
+                <Route path="/coins/:id" >
                     <CoinDetailsPage />
                 </Route>
             </Switch>

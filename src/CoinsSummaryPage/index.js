@@ -21,31 +21,30 @@ export default function CoinSummaryPage({coins, favouriteCoins, addFavouriteCoin
     return (
         
     <div className="container-fluid coinlist">
+
         <div className="dashName">
-            <Header  heading="Coins10x"/>
+            <Header  heading="Coin100x"/>
         </div> 
         
-            
-            
-            <div className="coinsContainer">
-                {favouriteCoins.map((coin) => {
-                    return (
-                        <Coin coin={coin}
-                              key={coin.id + "@"}
-                              handleClick={removeFavouriteCoin}
-                        />
-                    );
-                })}
-            </div>
-            <SearchBox search={search} setSearch={setSearch}/>
-        
+        <div className="coinsContainer">
+            {favouriteCoins.map((coin) => {
+                return(
+                    <Coin coin={coin}
+                      key={coin.id + "@"}
+                      handleClick={removeFavouriteCoin}
+                    />
+                );
+            })}
+        </div>
 
+        <SearchBox search={search} setSearch={setSearch}/>
+        
         <div className="coinsContainer">
             {filteredCoins.map((coin) => {
                 return (
                     <Coin coin={coin}
-                          handleClick={addFavouriteCoin} 
-                          key={coin.id}
+                        handleClick={addFavouriteCoin} 
+                        key={coin.id}
                     />
                 );
             })}

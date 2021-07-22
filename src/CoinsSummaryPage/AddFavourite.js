@@ -3,7 +3,10 @@ import React from 'react';
 const AddFavourite = ({handleClick, coin})=>{
     return(
         <>
-            <span className='' onClick={() => handleClick(coin)} style={{cursor: "pointer"}}>Add   /   Remove</span>
+            <p className='' onClick={() => handleClick(coin)} style={{cursor: "pointer"}}>
+                <span className="plus">+</span>    
+                <span className="minus">-</span>
+            </p>
             
         </>
     )

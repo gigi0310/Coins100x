@@ -13,7 +13,7 @@ const Coin = ({coin, handleClick}) =>{
         
                 <div className="crytoCoin" >
                     <div>
-                        <Link to={`/conis/${coin.id}`}  className="details" >Details</Link>
+                        <Link to={`/coins/${coin.id}`}  className="details" >Details</Link>
                     </div>
                     <img className="coinLogo" src={coin.image} alt={`${coin.name}`} />
                     <div className="coinNameWrap">
