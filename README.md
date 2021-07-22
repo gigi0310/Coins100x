@@ -24,11 +24,11 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 
 ### Homepage/Landing Page
 
-![Alt text](./src/App Home page.png)
+![picture](App Home page.png)
 
 ### Crytocurrency Dashboard
 
-![Alt text](./src/App Dashboard.png)
+![picture](App Dashboard.png)
 
 
 ## Technologies Used
