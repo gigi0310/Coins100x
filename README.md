@@ -1,71 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Coin100x
 
-## Available Scripts
+## App Deployment
 
-In the project directory, you can run:
+Visit the App here - [Coin100x](https://coin100x.herokuapp.com/), or you can also find the GitHub repo - [GitHub](https://github.com/gigi0310/Coins10x)
 
-### `npm start`
+## App Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This App provides real-time prices, market cap, volume, charts and market-related data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## App Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Fetching real-time data from coinGecko API
+* Createing a card-style layout for each crytocurrency with routing for more market-data related details
+* Adding and removeing the favourites from profile section
+* Searching coins with fuzzy search
+* Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
+* Retrieving from local storage on load
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## App View
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Homepage/Landing Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Alt text](./src/App Home page.png)
 
-### `npm run eject`
+### Crytocurrency Dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Alt text](./src/App Dashboard.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* React: Hooks (useState, useEffect, useParams, useRef)
+* React: Router
+* Javascript
+* Chart.js
+* Loadash
+* Local storage
+* Axios
+* HTML5
+* CSS3
+* Bootstrap
+* Heroku
+* Git
+* GitHub
 
-## Learn More
+## Issues
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [coinGecko Api](https://www.coingecko.com/api/documentations/v3) has missing data in total supply and market cap for specific coins. When fetching data from API, it will return undifined value, which makes the coin detais cannot render in the browser. In order to fix this issue, I put the if statement to control it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- In the project, the chart.js is v2, as have confige issue when using v3
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Challenges
 
-### Analyzing the Bundle Size
+- Utilise the React Hooks into the project
+- Adding coins to favourites, at the same time, removing coins from coins pool. 
+- Removing favourites coin, and adding back to the coins pool.
+- Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Add back-end for user authentication, user profile
+- Add cool features, like drag and drop coin card to the favourite section
+- Add filters, which can explore coins by category, exchange rate, price
+- Update the chart.js v2 to v3
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### How to Install Coin100x
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Coins10x
+- Fork and Clone this repository
+- In the directory, run npm install
