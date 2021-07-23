@@ -11,10 +11,11 @@ import {
     Route,
 } from "react-router-dom";
 
-import Header from "./CoinsSummaryPage/Header";
 
 function App() {
+    // load favours from localstorage
     const loadedFavouritesCoins = localStorage.getItem('favouriteCoins');
+
     const [state, setState] = useState({
         coins: [],
         favouriteCoins:loadedFavouritesCoins === null ? []:JSON.parse(loadedFavouritesCoins)
@@ -51,10 +52,22 @@ function App() {
                 "https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false"
             )
             .then((res) => {
-                const diff = pullAllWith(res.data, state.favouriteCoins, (item1, item2) => item1.id === item2.id);
+
+                // make favourite coins data update to date. 
+                const favouriteCoins = state.favouriteCoins.map(favour => {
+                    const found = res.data.find(coin => favour.id === coin.id);
+                    if (found) {
+                        return found
+                    }
+                    return favour
+                })
+                // filter unfavourite coins
+                const diff = pullAllWith(res.data, favouriteCoins, (item1, item2) => item1.id === item2.id);
+                // save to localstorage against to avoid lost latest favour data.
+                localStorage.setItem('favouriteCoins', JSON.stringify(favouriteCoins)); //
                 setState({
                     coins:diff,
-                    favouriteCoins: state.favouriteCoins
+                    favouriteCoins,
                 });
 
             })
