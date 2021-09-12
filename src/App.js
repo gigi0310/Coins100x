@@ -55,18 +55,18 @@ function App() {
 
                 // make favourite coins data update to date. 
                 const favouriteCoins = state.favouriteCoins.map(favour => {
-                    const found = res.data.find(coin => favour.id === coin.id);
-                    if (found) {
-                        return found
+                    const updatedFavour = res.data.find(coin => favour.id === coin.id);
+                    if (updatedFavour) {
+                        return updatedFavour
                     }
                     return favour
                 })
                 // filter unfavourite coins
-                const diff = pullAllWith(res.data, favouriteCoins, (item1, item2) => item1.id === item2.id);
+                const unSelectedCoins = pullAllWith(res.data, favouriteCoins, (item1, item2) => item1.id === item2.id);
                 // save to localstorage against to avoid lost latest favour data.
                 localStorage.setItem('favouriteCoins', JSON.stringify(favouriteCoins)); //
                 setState({
-                    coins:diff,
+                    coins:unSelectedCoins,
                     favouriteCoins,
                 });
 
