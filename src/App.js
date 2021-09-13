@@ -18,7 +18,7 @@ function App() {
 
     const [state, setState] = useState({
         coins: [],
-        favouriteCoins:loadedFavouritesCoins === null ? []:JSON.parse(loadedFavouritesCoins)
+        favouriteCoins:loadedFavouritesCoins === null ? []:JSON.parse(loadedFavouritesCoins)// conver Json into javascript
     });
       
 
@@ -47,7 +47,9 @@ function App() {
     };
      
     useEffect(() => {
-        axios
+
+        const fetchDate = async()=>{
+            await axios
             .get(
                 "https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false"
             )
@@ -72,7 +74,14 @@ function App() {
 
             })
             .catch((error) => console.error(error));
-    },[]);
+        }
+        
+        setInterval(()=>{
+            console.log("refresh");
+            fetchDate();
+        }, 300000)
+        fetchDate();
+    },[setState]);
 
     return (
         <Router>
