@@ -1,0 +1,6 @@
+steps:
+  - label: ":rocket: deploy to :heroku:"
+    command: git push heroku master
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      heroku: "*"
