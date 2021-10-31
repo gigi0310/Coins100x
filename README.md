@@ -44,6 +44,7 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 - Heroku
 - Git
 - GitHub
+- Buildkite (CI)
 
 ## Issues
 
@@ -57,6 +58,7 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 - Adding coins to favourites, at the same time, removing coins from coins pool.
 - Removing favourites coin, and adding back to the coins pool.
 - Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
+- Use buildkite to continuously deploy to heroku
 
 ## Future Improvements
 
