@@ -1,6 +1,6 @@
 steps:
-  - label: ":rocket: deploy to :heroku:"
-    command: git push heroku master
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-      heroku: "*"
+  - label: ":heroku: Deploy"
+    branches: "main"
+    commands:
+      - "heroku git:remote --app coin100x"
+      - "git push heroku $BUILDKITE_COMMIT:main"
