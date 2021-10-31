@@ -1,6 +1,6 @@
 # Coin100x
 
-[![Build status](https://badge.buildkite.com/5517b0811ff356904827db920d363c2f9ba86be9e94236f014.svg)](https://buildkite.com/org534/coins100x)
+[![Build status](https://badge.buildkite.com/1a040fca2f5f8ba1a8b56c83df624f3c94804ce8669156adc1.svg)](https://buildkite.com/org534/coins100x)
 
 ## App Deployment
 
