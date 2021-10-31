@@ -3,4 +3,4 @@ steps:
     branches: "main"
     commands:
       - "heroku git:remote --app coin100x"
-      - "git push heroku $BUILDKITE_COMMIT:main"
+      - "git push heroku $BUILDKITE_COMMIT:main --force"

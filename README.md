@@ -1,5 +1,6 @@
-
 # Coin100x
+
+[![Build status](https://badge.buildkite.com/5517b0811ff356904827db920d363c2f9ba86be9e94236f014.svg)](https://buildkite.com/org534/coins100x)
 
 ## App Deployment
 
@@ -9,16 +10,14 @@ Visit the App here - [Coin100x](https://coin100x.herokuapp.com/), or you can als
 
 This App provides real-time prices, market cap, volume, charts and market-related data.
 
-
 ## App Features
 
-* Fetching real-time data from coinGecko API
-* Createing a card-style layout for each crytocurrency with routing for more market-data related details
-* Adding and removeing the favourites from profile section
-* Searching coins with fuzzy search
-* Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
-* Retrieving from local storage on load
-
+- Fetching real-time data from coinGecko API
+- Createing a card-style layout for each crytocurrency with routing for more market-data related details
+- Adding and removeing the favourites from profile section
+- Searching coins with fuzzy search
+- Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
+- Retrieving from local storage on load
 
 ## App View
 
@@ -30,22 +29,21 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 
 ![picture](/AppDashboard.png)
 
-
 ## Technologies Used
 
-* React: Hooks (useState, useEffect, useParams, useRef)
-* React: Router
-* Javascript
-* Chart.js
-* Loadash
-* Local storage
-* Axios
-* HTML5
-* CSS3
-* Bootstrap
-* Heroku
-* Git
-* GitHub
+- React: Hooks (useState, useEffect, useParams, useRef)
+- React: Router
+- Javascript
+- Chart.js
+- Loadash
+- Local storage
+- Axios
+- HTML5
+- CSS3
+- Bootstrap
+- Heroku
+- Git
+- GitHub
 
 ## Issues
 
@@ -53,14 +51,12 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 
 - In the project, the chart.js is v2, as have confige issue when using v3
 
-
 ## Challenges
 
 - Utilise the React Hooks into the project
-- Adding coins to favourites, at the same time, removing coins from coins pool. 
+- Adding coins to favourites, at the same time, removing coins from coins pool.
 - Removing favourites coin, and adding back to the coins pool.
 - Adding muliple time segments (1 day, 1 week and 1 year) for users to look at historical pricing for each currency
-
 
 ## Future Improvements
 
@@ -68,7 +64,6 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 - Add cool features, like drag and drop coin card to the favourite section
 - Add filters, which can explore coins by category, exchange rate, price
 - Update the chart.js v2 to v3
-
 
 ### How to Install Coin100x
 
