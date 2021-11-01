@@ -71,3 +71,7 @@ This App provides real-time prices, market cap, volume, charts and market-relate
 
 - Fork and Clone this repository
 - In the directory, run npm install
+
+### Integrate Heroku with Buildkite
+
+[Deploying to Heroku](https://buildkite.com/docs/deployments/deploying-to-heroku)
